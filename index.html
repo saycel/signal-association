@@ -1,0 +1,22 @@
+<!doctype html>  
+<html lang="en">  
+    <head>
+
+    </head>
+    <body>
+        <div id="future"></div>
+        <script src="/socket.io/socket.io.js"></script>
+    </body>
+    <script>
+
+    var socket = io.connect('localhost:8000');
+
+    socket.on('connect', function() {
+      console.log('Connected to:', socket.host);
+    });
+    socket.on('message', function(message) {
+      console.log('Received message:', message);
+
+    });
+    </script>
+</html>  
